@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="오전 9시 배송 점검을 위한 주문 및 위험 주문 현황">
-<title>배송 운영 데스크</title>
+<title>배송 점검 워크스페이스 · 추가실습</title>
 <style>
 :root{--ink:#162b44;--muted:#63748a;--line:#dfe6ee;--bg:#f3f6fa;--blue:#2663bf;--red:#b73740;--amber:#a25a14;--navy:#142a44;--radius:16px}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Malgun Gothic","맑은 고딕",system-ui,sans-serif;font-size:16px;line-height:1.5}button,select{font:inherit}button,select{cursor:pointer}button:focus-visible,select:focus-visible{outline:3px solid #69a6ff;outline-offset:3px}button:disabled{cursor:default;opacity:.4}.masthead{background:var(--navy);color:#fff;padding:26px max(28px,calc((100vw - 1380px)/2)) 31px}.topline{display:flex;justify-content:space-between;align-items:center;gap:20px}.wordmark{font-weight:700;letter-spacing:.03em;font-size:14px;color:#b6cbe2}.latest{font-size:14px;color:#d7e5f5;border:1px solid #45607e;border-radius:24px;padding:7px 14px}.masthead h1{font-size:30px;letter-spacing:-1px;margin:22px 0 6px}.masthead p{margin:0;color:#bdd0e4;font-size:15px}.clock{font-variant-numeric:tabular-nums;color:#93bcf0;margin-right:10px}.wrap{max-width:1436px;margin:auto;padding:24px 28px 40px}.panel{background:white;border:1px solid var(--line);border-radius:var(--radius)}.filters{padding:19px 22px;display:flex;align-items:flex-end;gap:16px;box-shadow:0 3px 12px #142a4404}.field{display:flex;flex-direction:column;gap:7px;min-width:180px;flex:1}.field label{font-size:14px;font-weight:700}.field select{appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23536680' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 13px center;border:1px solid #cdd8e5;border-radius:9px;height:44px;padding:0 38px 0 13px;color:var(--ink);width:100%}.reset{height:44px;padding:0 19px;background:#edf3fa;border:1px solid #d5e0ed;color:#2e4b6c;border-radius:9px;font-size:14px;font-weight:700}.filter-note{margin:10px 2px 21px;color:var(--muted);font-size:13px}.section-line{display:flex;align-items:center;justify-content:space-between;margin:0 0 14px;gap:15px}.section-line h2{font-size:20px;margin:0;letter-spacing:-.5px}.section-line .date{font-size:14px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:22px}.card{padding:22px 24px;position:relative;overflow:hidden;min-height:168px}.card:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:#5381ba}.card.risk:before{background:#cf8e37}.card.urgent:before{background:#c24d56}.card .label{font-size:15px;font-weight:700;color:#52677f}.card .number{font-size:43px;line-height:1.2;font-weight:750;letter-spacing:-1.8px;margin:15px 0 9px;font-variant-numeric:tabular-nums}.card .number small{font-size:16px;font-weight:500;color:var(--muted);margin-left:7px;letter-spacing:0}.risk .number{color:var(--amber)}.urgent .number{color:var(--red)}.card p{font-size:13px;color:var(--muted);margin:0}.middle{display:grid;grid-template-columns:1.35fr 1fr;gap:20px;margin-bottom:22px}.chart-panel,.brief{padding:23px 24px}.panel h3{font-size:17px;margin:0}.sub{font-size:13px;color:var(--muted);margin:5px 0 18px}.legend{display:flex;gap:16px;font-size:13px;color:var(--muted);margin-bottom:16px}.legend span{display:flex;align-items:center;gap:6px}.swatch{width:9px;height:9px;border-radius:2px;background:#d9e4f1}.swatch.r{background:#cf8e37}.bar-row{display:grid;grid-template-columns:72px 1fr 115px;align-items:center;gap:13px;margin:13px 0;font-size:14px}.track{height:13px;background:#eef3f9;border-radius:5px;display:flex;overflow:hidden}.segment-safe{background:#d9e4f1}.segment-risk{background:#cf8e37}.bar-value{text-align:right;font-size:13px;color:#52677f;font-variant-numeric:tabular-nums}.brief{background:#fafcfe}.brief-title{display:flex;gap:10px;align-items:center}.brief-icon{display:flex;justify-content:center;align-items:center;background:#e7effb;color:#315f9c;border-radius:8px;width:29px;height:29px;font-weight:bold}.brief-text{font-size:16px;line-height:1.8;margin:16px 0}.brief-text strong{color:var(--red)}.rule{border-top:1px solid var(--line);padding-top:13px;margin:13px 0 0;font-size:13px;color:var(--muted)}.table-panel{overflow:hidden}.table-head{padding:22px 24px 17px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.table-head p{margin-bottom:0}.tabs{display:flex;gap:4px;padding:4px;background:#edf2f8;border-radius:10px;flex-wrap:wrap}.tab{border:0;background:transparent;color:#5d7086;border-radius:7px;font-size:14px;padding:8px 13px;white-space:nowrap}.tab[aria-pressed="true"]{background:#fff;color:#1e4e8b;box-shadow:0 1px 5px #142a4412;font-weight:700}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;white-space:nowrap;font-size:14px}th{background:#f5f8fc;color:#607187;text-align:left;font-size:13px;font-weight:700;padding:13px 15px;border-block:1px solid var(--line)}td{padding:14px 15px;border-bottom:1px solid #edf1f6}th:first-child,td:first-child{padding-left:24px}tbody tr:hover{background:#f8faff}tbody tr.priority{background:#fffafa}tbody tr.priority:hover{background:#fff3f3}.order-id{font-weight:700;color:#264971;font-variant-numeric:tabular-nums}.badge{display:inline-flex;padding:4px 9px;font-size:12px;border-radius:6px;font-weight:700}.badge.high{background:#fbe8ea;color:#af3541}.badge.warn{background:#fff0dc;color:#9c601c}.badge.normal{background:#edf2f7;color:#697b8e}.deadline{font-weight:700;color:#ad3541}.probability{font-weight:700;font-variant-numeric:tabular-nums}.num{text-align:right}.empty{text-align:center;padding:45px;color:var(--muted)}.pager{padding:15px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;color:var(--muted)}.pager-controls{display:flex;align-items:center;gap:12px}.pager button{padding:6px 13px;background:#fff;border:1px solid #d4dfec;border-radius:7px;color:var(--ink);font-size:13px}.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:19px;font-size:12px;color:#78889b}.footer p{margin:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -34,12 +34,15 @@
 #show-all,#all-centers{background:#285d44;color:#fff;border:2px solid #1e4935;font-size:14px;font-weight:700;box-shadow:0 2px 3px #1637331c;transition:background .15s,box-shadow .15s,transform .15s;cursor:pointer;min-height:43px;padding:9px 16px}#show-all:hover,#all-centers:hover{background:#173f2c;box-shadow:0 3px 7px #16373333;transform:translateY(-1px)}#show-all:active,#all-centers:active{transform:translateY(0);box-shadow:none}#show-all:focus-visible,#all-centers:focus-visible{outline:3px solid #bc8b35;outline-offset:3px}
 @media(max-width:1100px){.priority-panel{position:static}.queue-column .table-head{display:flex}.queue-column .table-head .tabs{margin-top:0}}
 @media(max-width:650px){.overview-section .chart-panel{padding:18px 15px}.queue-column .table-head{display:block}.queue-column .table-head .tabs{margin-top:12px;width:100%}.queue-column .priority-summary{padding:16px}.queue-column .list-toolbar{padding-inline:18px}#all-centers{font-size:13px;padding:8px 12px;white-space:nowrap}}
+.review-workbar{margin:0 24px 16px;padding:14px 16px;background:#edf5ef;border:1px solid #d4e3d8;border-radius:9px}.review-workbar-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.review-workbar h4{font-size:14px;margin:0}.review-stats{font-size:14px;color:#315b43;margin:7px 0}.review-backups{display:flex;gap:7px;flex-wrap:wrap}.review-backups button{font-size:13px}.review-storage{font-size:12px;color:#607666;margin:8px 0 0;line-height:1.7}.review-status{font-size:13px;color:#315f43;margin:8px 0 0;line-height:1.7}.review-status.error{color:#a23f30}.review-import-preview{padding:12px;background:#fff9ed;border:1px solid #e7d8b7;border-radius:7px;margin-top:10px;font-size:14px}.review-import-preview button{margin:10px 8px 0 0}.review-list-control label{display:block;font-size:13px;color:#5e786a;margin-bottom:6px;font-weight:700}.review-list-control select{max-width:210px}.review-scope-note{font-size:13px;color:#7b6231;padding:10px 14px;background:#fff8e9;border-radius:7px;margin:0 24px 15px}.review-open{font:inherit;font-weight:700;color:#225f42;background:#edf7ef;border:1px solid #b3d2bd;border-radius:6px;padding:5px 9px;cursor:pointer;text-decoration:none}.review-open:hover{background:#d9efdf;border-color:#58896a}.review-record{min-width:120px}.review-chip{font-size:12px;border-radius:5px;padding:4px 7px;display:inline-block;background:#edf0f2;color:#62777b;font-weight:600}.review-chip.working{color:#9a6c22;background:#fff1d3}.review-chip.done{color:#246143;background:#e0f1e5}.review-owner{font-size:12px;color:#6f8174;display:block;margin-top:5px}.review-mobile{font-size:12px;color:#788a7e;display:block;margin:5px 0 0}.review-dialog{border:1px solid #ccded2;border-radius:18px;padding:0;width:min(800px,calc(100vw - 30px));max-height:90vh;color:#193f2e;background:#f8fbf9;box-shadow:0 24px 100px #0c302e40;overflow:auto}.review-dialog::backdrop{background:#102e27a3}.review-dialog-header{background:#1b4636;color:#fff;padding:21px 25px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;position:sticky;top:0;z-index:2}.review-dialog-header p{font-size:12px;color:#bed9ca;margin:0 0 6px}.review-dialog-header h2{font-size:23px;margin:0;line-height:1.3}.review-dialog-header button{background:#ffffff16;color:white;border:1px solid #94b6a2;border-radius:7px;padding:6px 13px;font-size:14px;cursor:pointer}.review-dialog-content{padding:22px 25px}.review-step{border:1px solid #dbe7df;background:#fff;border-radius:11px;padding:18px;margin-bottom:15px}.review-step h3{font-size:16px;margin:0 0 13px}.review-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px;margin:0}.review-facts dt{color:#708274;font-size:12px}.review-facts dd{margin:4px 0 0;font-size:14px;font-weight:600;overflow-wrap:anywhere}.review-score{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:17px}.review-score span{font-size:13px;padding:5px 10px;border-radius:6px;background:#edf5ef}.review-score .risk{background:#fff0df;color:#975e22}.review-question{margin:0;padding-left:20px;font-size:14px;line-height:1.9;color:#47604c}.review-explanation{font-size:12px;line-height:1.7;color:#7a887e;margin:13px 0 0}.review-form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.review-form label{display:block;font-weight:600;font-size:13px;margin-bottom:6px}.review-form select,.review-form input,.review-form textarea{display:block;width:100%;font:inherit;font-size:14px;border:1px solid #bbd0c1;background:#fcfefc;border-radius:7px;padding:10px 12px;color:#274d36}.review-form textarea{min-height:125px;resize:vertical;line-height:1.8}.review-memo-label{margin-top:15px}.review-form-footer{font-size:12px;color:#728577;margin:8px 0 0;display:flex;justify-content:space-between;gap:10px}.review-dialog-actions{display:flex;gap:9px;align-items:center;justify-content:flex-end;flex-wrap:wrap;margin-top:12px}.review-dialog-actions button{font:inherit;font-size:14px;border-radius:7px;padding:11px 16px;cursor:pointer}.review-save{background:#285d44;color:#fff;border:1px solid #285d44}.review-next{background:#e4f1e8;color:#285d44;border:1px solid #a7c7b0}.review-dialog button:focus-visible,.review-dialog input:focus-visible,.review-dialog textarea:focus-visible,.review-dialog select:focus-visible,.review-open:focus-visible{outline:3px solid #d9ae56;outline-offset:2px}.review-discard{background:#fff3e4;border:1px solid #e4ceac;border-radius:7px;padding:12px;margin-top:14px;font-size:14px}.review-discard button{margin:9px 8px 0 0}.review-dialog-feedback{font-size:13px;color:#9d4634;line-height:1.7;min-height:0}.review-data-note{font-size:13px;color:#5b7966;margin:8px 0 0}
+@media(max-width:650px){.review-workbar{margin:0 18px 14px;padding:12px}.review-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.review-dialog-header{padding:18px}.review-dialog-content{padding:16px}.review-step{padding:15px}.review-dialog-header h2{font-size:20px}.review-form-row{grid-template-columns:1fr}.review-dialog-actions button{flex:1;padding:10px}.review-scope-note{margin-inline:18px}.review-form-footer{flex-direction:column}.review-list-control{flex:1;min-width:140px}.review-list-control select{width:100%;max-width:none}}
+
 </style>
 </head>
 <body>
 <header class="masthead">
- <div class="topline"><div class="wordmark">배송 운영 · 오전 점검</div><div class="latest">데이터 최신 점검일 <strong id="latest-date"></strong> · 09:00</div></div>
- <h1 id="page-title">배송 운영 데스크</h1>
+ <div class="topline"><div class="wordmark">배송 운영 · 추가실습</div><div class="latest">데이터 최신 점검일 <strong id="latest-date"></strong> · 09:00</div></div>
+ <h1 id="page-title">배송 점검 워크스페이스</h1>
  <p id="page-description"><span class="clock">09:00</span>출고 전, 오늘 확인할 주문과 위험 주문을 한눈에 확인하세요.</p>
 </header>
 <main class="wrap">
@@ -73,8 +76,8 @@
   <section class="panel priority-summary" id="priority-summary" aria-labelledby="selected-priority-title" aria-live="polite" hidden><div class="priority-summary-top"><h3 id="selected-priority-title">선택한 우선순위</h3><span class="priority-summary-count" id="selected-priority-count"></span></div><p class="summary-condition" id="selected-priority-reason"></p><p class="summary-action"><strong>확인할 사항</strong><span id="selected-priority-action"></span></p><div class="priority-summary-controls"><button type="button" class="outline-button" id="jump-selected-list">해당 주문 목록 보기</button><button type="button" class="outline-button" id="clear-selected-priority">순위 선택 해제</button></div><p class="priority-summary-note">점검일·센터·운송사 기준의 선택 순위 건수입니다. 목록 검색 조건은 적용하지 않습니다.</p></section>
  <section class="panel table-panel" aria-labelledby="list-title">
   <div class="table-head"><div><h3><span id="list-title">점검 주문 목록</span><span class="list-badge" id="visible-count"></span></h3><p class="sub" id="sort-description">위험 주문 1~4순위 우선 · 같은 순위에서는 지연예측확률이 높은 순으로 표시합니다.</p></div><div class="tabs" role="group" aria-label="주문 목록 범위"><button class="tab" data-view="all" aria-pressed="true">전체 주문</button><button class="tab" data-view="risk" aria-pressed="false">위험 주문</button><button class="tab" data-view="urgent" aria-pressed="false">0일 이하 위험</button></div></div>
-  <div class="list-toolbar"><div class="search-field"><label for="order-search">주문 찾기</label><input type="search" id="order-search" placeholder="주문ID 또는 배송지역 검색" autocomplete="off"></div><div class="sort-field"><label for="list-sort">목록 정렬</label><select id="list-sort"><option value="priority">운영 우선순위</option><option value="probability">예측확률 높은 순</option><option value="slack">배송여유일 적은 순</option></select></div><button type="button" class="export-button" id="export-csv">목록 CSV 저장</button></div>
-  <p class="export-note">검색·목록 범위는 아래 목록에만 적용됩니다. CSV에는 현재 조건에 맞는 모든 페이지의 주문이 저장됩니다.</p><p class="export-status" id="export-status" role="status"></p>
+  <section class="review-workbar" aria-label="점검 기록 관리"><div class="review-workbar-top"><h4>담당자 점검 진행</h4><div class="review-backups"><button type="button" class="outline-button" id="review-backup">기록 백업</button><button type="button" class="outline-button" id="review-import-open">기록 불러오기</button><input type="file" id="review-import-file" accept=".json,application/json" hidden></div></div><p class="review-stats" id="review-stats" aria-live="polite"></p><p class="review-storage" id="review-storage"></p><p class="review-status" id="review-message" role="status"></p><div class="review-import-preview" id="review-import-preview" hidden><div id="review-import-preview-text"></div><button type="button" class="outline-button" id="review-import-apply">기록 적용</button><button type="button" class="outline-button" id="review-import-cancel">취소</button></div></section><div class="list-toolbar"><div class="search-field"><label for="order-search">주문 찾기</label><input type="search" id="order-search" placeholder="주문ID 또는 배송지역 검색" autocomplete="off"></div><div class="review-list-control"><label for="review-search-scope">검색 범위</label><select id="review-search-scope"><option value="current">현재 조회 조건</option><option value="all">전체 운영 데이터</option></select></div><div class="review-list-control"><label for="review-list-status">점검 상태</label><select id="review-list-status"><option value="">전체 상태</option><option value="미점검">미점검만 보기</option><option value="확인 중">확인 중</option><option value="확인 완료">확인 완료</option></select></div><div class="sort-field"><label for="list-sort">목록 정렬</label><select id="list-sort"><option value="priority">운영 우선순위</option><option value="probability">예측확률 높은 순</option><option value="slack">배송여유일 적은 순</option></select></div><button type="button" class="export-button" id="export-csv">목록 CSV 저장</button></div>
+  <p class="review-scope-note" id="review-scope-note"></p><p class="export-note">검색·목록 범위는 아래 목록에만 적용됩니다. CSV에는 현재 조건에 맞는 모든 페이지의 주문이 저장됩니다.</p><p class="export-status" id="export-status" role="status"></p>
   <div class="selection-banner" id="selection-banner" hidden></div>
   <div class="table-wrap"><table><caption class="sr-only">현재 조회 조건의 배송 점검 주문. 목록 범위 선택은 위 요약 수치에 영향을 주지 않습니다.</caption><thead><tr><th scope="col">운영 우선순위</th><th scope="col">주문 / 배송지역</th><th scope="col">점검일</th><th scope="col">물류센터</th><th scope="col">운송사</th><th scope="col">배송약속일</th><th scope="col" class="num">배송여유일</th><th scope="col">재고확보상태</th><th scope="col" class="num">지연예측확률</th><th scope="col">확인할 사항</th></tr></thead><tbody id="orders"></tbody></table></div>
   <div class="pager"><span id="list-count" aria-live="polite"></span><div class="pager-controls"><button id="previous" type="button">이전</button><span id="page-number"></span><button id="next" type="button">다음</button></div></div>
@@ -117,7 +120,7 @@ let view='all',page=1;
 const pageSize=20;
 function setActivePage(name){
  ['operations','model'].forEach(id=>{const active=id===name;$(id+'-panel').hidden=!active;$(id+'-tab').setAttribute('aria-selected',String(active));$(id+'-tab').tabIndex=active?0:-1;});
- $('page-title').textContent=name==='model'?'모델 안내':'배송 운영 데스크';
+ $('page-title').textContent=name==='model'?'모델 안내':'배송 점검 워크스페이스';
  $('page-description').textContent=name==='model'?'운영에 적용한 모델의 기준, 선정 근거와 고려할 사항을 확인하세요.':'09:00 · 출고 전, 오늘 확인할 주문과 위험 주문을 한눈에 확인하세요.';
 }
 document.querySelectorAll('[data-page]').forEach(button=>{
@@ -141,7 +144,7 @@ function listCSV(rows){const cols=['주문ID','점검기준일시','물류센터
 function render(){
  const rows=filteredRows(),risk=rows.filter(isRisk),urgent=rows.filter(isUrgent);
  $('total-count').textContent=number(rows.length);$('risk-count').textContent=number(risk.length);$('urgent-count').textContent=number(urgent.length);
- $('risk-caption').textContent='조회 주문 중 '+(rows.length?(risk.length/rows.length*100).toFixed(1):'0.0')+'% · 지연예측확률 50% 이상';
+ $('risk-caption').textContent='조회 주문 중 '+(rows.length?(risk.length/rows.length*100).toFixed(2):'0.0')+'% · 지연예측확률 50% 이상';
  $('scope').textContent=[periodLabel(), $('center-filter').value||'전체 센터',$('carrier-filter').value||'전체 운송사'].join(' / ');
  $('period-range').textContent='조회 기간: '+periodLabel();
  document.querySelectorAll('[data-period]').forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.period==='latest'?latest:b.dataset.period==='all'?'':b.dataset.period)===$('date-filter').value)));
@@ -150,7 +153,7 @@ function render(){
  const centerStats=centers.map(c=>({name:c,total:chartRows.filter(r=>r['물류센터']===c).length,risk:chartRows.filter(r=>r['물류센터']===c&&isRisk(r)).length}));
  const max=Math.max(4,Math.ceil(Math.max(0,...centerStats.map(c=>c.total))/4)*4);
  $('center-axis-max').innerHTML=[0,.25,.5,.75,1].map(t=>'<span>'+number(max*t)+'</span>').join('');
- $('center-chart').innerHTML=centerStats.map(c=>{const selected=$('center-filter').value===c.name,rate=c.total?c.risk/c.total*100:0,label=c.name+' 전체 '+c.total+'건, 위험 '+c.risk+'건, 위험 비율 '+(c.total?rate.toFixed(1)+'%':'해당 없음')+'. 누르면 센터 필터 적용';return '<button type="button" class="center-option" data-center="'+escapeHTML(c.name)+'" aria-pressed="'+selected+'" aria-label="'+escapeHTML(label)+'" title="'+escapeHTML(label)+'"><span class="center-name">'+escapeHTML(c.name)+'<span class="center-state">'+(selected?'선택된 센터':'눌러서 센터 조회')+'</span></span><span><span class="center-totals"><span>전체 <b>'+number(c.total)+'</b>건</span><span class="risk-value">위험 <b>'+number(c.risk)+'</b>건</span></span><span class="track" aria-hidden="true"><span class="segment-safe" style="width:'+((c.total-c.risk)/max*100)+'%"></span><span class="segment-risk" style="width:'+(c.risk/max*100)+'%"></span></span></span><span class="center-rate-row"><span class="center-rate-label">위험 비율</span><span class="risk-rate">'+(c.total?rate.toFixed(1)+'%':'—')+'</span><span class="rate-track" aria-hidden="true"><i style="width:'+rate+'%"></i></span></span></button>';}).join('');
+ $('center-chart').innerHTML=centerStats.map(c=>{const selected=$('center-filter').value===c.name,rate=c.total?c.risk/c.total*100:0,label=c.name+' 전체 '+c.total+'건, 위험 '+c.risk+'건, 위험 비율 '+(c.total?rate.toFixed(2)+'%':'해당 없음')+'. 누르면 센터 필터 적용';return '<button type="button" class="center-option" data-center="'+escapeHTML(c.name)+'" aria-pressed="'+selected+'" aria-label="'+escapeHTML(label)+'" title="'+escapeHTML(label)+'"><span class="center-name">'+escapeHTML(c.name)+'<span class="center-state">'+(selected?'선택된 센터':'눌러서 센터 조회')+'</span></span><span><span class="center-totals"><span>전체 <b>'+number(c.total)+'</b>건</span><span class="risk-value">위험 <b>'+number(c.risk)+'</b>건</span></span><span class="track" aria-hidden="true"><span class="segment-safe" style="width:'+((c.total-c.risk)/max*100)+'%"></span><span class="segment-risk" style="width:'+(c.risk/max*100)+'%"></span></span></span><span class="center-rate-row"><span class="center-rate-label">위험 비율</span><span class="risk-rate">'+(c.total?rate.toFixed(2)+'%':'계산 불가')+'</span><span class="rate-track" aria-hidden="true"><i style="width:'+rate+'%"></i></span></span></button>';}).join('');
  $('center-chart-note').textContent=$('center-filter').value?$('center-filter').value+' 선택 중 · 그래프는 다른 센터와 비교할 수 있도록 전체 센터를 유지합니다.':'전체 센터 조회 중 · 위험 비율 = 위험 주문수 ÷ 센터 전체 주문수';
  document.querySelectorAll('[data-center]').forEach(b=>b.addEventListener('click',()=>{const clickedCenter=b.dataset.center;$('center-filter').value=$('center-filter').value===clickedCenter?'':clickedCenter;page=1;render();const replacement=[...document.querySelectorAll('[data-center]')].find(button=>button.dataset.center===clickedCenter);if(replacement)replacement.focus({preventScroll:true});}));
  document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));
@@ -170,7 +173,7 @@ function render(){
  $('selection-banner').innerHTML=activePriority?'<b>'+activePriority+'순위 · '+priorityRules[activePriority].reason+'</b><br>'+priorityRules[activePriority].action:'';
  const pages=Math.max(1,Math.ceil(visible.length/pageSize));page=Math.min(page,pages);
  const start=(page-1)*pageSize,subset=visible.slice(start,start+pageSize);
- $('orders').innerHTML=subset.length?subset.map(r=>{const riskFlag=isRisk(r),urgentFlag=isUrgent(r),rank=priority(r),prob=r['지연예측확률']*100;return '<tr'+(urgentFlag?' class="priority"':'')+'><td><span class="badge '+(rank===1?'high':rank?'warn':'normal')+'">'+(rank?rank+'순위':'일반 점검')+'</span></td><td class="order-id">'+escapeHTML(r['주문ID'])+'<span class="order-secondary">'+escapeHTML(r['배송지역'])+' · '+escapeHTML(r['배송유형'])+'</span></td><td>'+dateOf(r).replaceAll('-','.')+'</td><td>'+escapeHTML(r['물류센터'])+'</td><td>'+escapeHTML(r['운송사'])+'</td><td>'+escapeHTML(r['배송약속일'])+'</td><td class="num '+(urgentFlag?'deadline':'')+'">'+escapeHTML(r['배송여유일수'])+'일</td><td>'+escapeHTML(r['재고확보상태'])+'</td><td class="num probability prob-cell"><span class="prob-line"><span>'+prob.toFixed(1)+'%</span><span class="prob-track '+(riskFlag?'risky':'')+'" aria-hidden="true"><span style="width:'+prob+'%"></span></span></span></td><td class="action-cell">'+(rank?priorityRules[rank].action:'배송 일정 확인')+'</td></tr>';}).join(''):'<tr><td colspan="10" class="empty">해당하는 주문이 없습니다. 조회 조건 또는 목록 범위를 변경하세요.</td></tr>';
+ $('orders').innerHTML=subset.length?subset.map(r=>{const riskFlag=isRisk(r),urgentFlag=isUrgent(r),rank=priority(r),prob=r['지연예측확률']*100;return '<tr'+(urgentFlag?' class="priority"':'')+'><td><span class="badge '+(rank===1?'high':rank?'warn':'normal')+'">'+(rank?rank+'순위':'일반 점검')+'</span></td><td class="order-id">'+escapeHTML(r['주문ID'])+'<span class="order-secondary">'+escapeHTML(r['배송지역'])+' · '+escapeHTML(r['배송유형'])+'</span></td><td>'+dateOf(r).replaceAll('-','.')+'</td><td>'+escapeHTML(r['물류센터'])+'</td><td>'+escapeHTML(r['운송사'])+'</td><td>'+escapeHTML(r['배송약속일'])+'</td><td class="num '+(urgentFlag?'deadline':'')+'">'+escapeHTML(r['배송여유일수'])+'일</td><td>'+escapeHTML(r['재고확보상태'])+'</td><td class="num probability prob-cell"><span class="prob-line"><span>'+prob.toFixed(2)+'%</span><span class="prob-track '+(riskFlag?'risky':'')+'" aria-hidden="true"><span style="width:'+prob+'%"></span></span></span></td><td class="action-cell">'+(rank?priorityRules[rank].action:'배송 일정 확인')+'</td></tr>';}).join(''):'<tr><td colspan="10" class="empty">해당하는 주문이 없습니다. 조회 조건 또는 목록 범위를 변경하세요.</td></tr>';
  $('visible-count').textContent=number(visible.length)+'건';
  const viewLabel=activePriority?activePriority+'순위 위험 주문':view==='risk'?'위험 주문':view==='urgent'?'0일 이하 위험 주문':'전체 주문';
  $('list-count').textContent=viewLabel+' '+number(visible.length)+'건'+(visible.length?' · '+number(start+1)+'–'+number(Math.min(start+pageSize,visible.length))+'건 표시':'')+' · 목록 범위는 요약 수치에 영향을 주지 않습니다.';
@@ -189,5 +192,191 @@ $('export-csv').addEventListener('click',()=>{const rows=currentListRows();if(!r
 $('reset').addEventListener('click',()=>{$('date-filter').value=latest;$('center-filter').value='';$('carrier-filter').value='';$('order-search').value='';$('list-sort').value='priority';view='all';page=1;render();});
 render();
 </script>
+<dialog class="review-dialog" id="review-dialog" aria-labelledby="review-dialog-title">
+ <div class="review-dialog-header"><div><p>추가실습 · 담당자 점검 기록</p><h2 id="review-dialog-title">주문 점검·대응 기록</h2></div><button type="button" id="review-close" aria-label="점검 팝업 닫기">닫기</button></div>
+ <div class="review-dialog-content">
+  <section class="review-step"><h3>주문에서 확인된 정보</h3><div class="review-score" id="review-score"></div><dl class="review-facts" id="review-facts"></dl><details><summary>물량·배송 참고 정보</summary><dl class="review-facts" id="review-reference"></dl></details><p class="review-explanation">예측은 지연 확정이 아닙니다. 아래 정보는 점검 시점의 입력값이며, 모델이 위험으로 판단한 원인을 설명하는 값은 아닙니다.</p></section>
+  <section class="review-step"><h3>이번에 담당자가 확인할 질문</h3><ul class="review-question" id="review-questions"></ul><p class="review-explanation">업무 우선순위에 따른 확인 질문입니다. 연락 여부와 답변은 담당자가 확인 후 기록하세요.</p></section>
+  <section class="review-step review-form"><h3>담당자 점검 기록</h3><div class="review-form-row"><div><label for="review-status-input">점검 상태</label><select id="review-status-input"><option>미점검</option><option>확인 중</option><option>확인 완료</option></select></div><div><label for="review-owner-input">담당자 (선택)</label><input id="review-owner-input" maxlength="80" autocomplete="off" placeholder="직접 입력"></div></div><label class="review-memo-label" for="review-memo-input">확인 내용과 다음 조치</label><textarea id="review-memo-input" maxlength="2000" placeholder="확인한 사실, 연락 결과, 다음에 확인할 내용을 기록하세요."></textarea><div class="review-form-footer"><span id="review-updated"></span><span id="review-memo-count">0 / 2,000자</span></div><p class="review-data-note">점검 상태는 담당자의 작업 기록입니다. 예측확률·위험여부·재고 원본값은 변경하지 않습니다.</p></section>
+  <p class="review-dialog-feedback" id="review-dialog-feedback" role="status"></p>
+  <div class="review-discard" id="review-discard" hidden>저장하지 않은 변경이 있습니다.<br><button type="button" class="outline-button" id="review-discard-confirm">저장하지 않고 닫기</button><button type="button" class="outline-button" id="review-continue">계속 작성하기</button></div>
+  <div class="review-dialog-actions"><button type="button" class="review-next" id="review-save-next">저장하고 다음 주문</button><button type="button" class="review-save" id="review-save-close">저장하고 닫기</button></div>
+ </div>
+</dialog>
+
+<script>
+/* Small record format shared by local storage, backup and import. */
+const DeliveryReviewState = (() => {
+  const statuses = ['미점검', '확인 중', '확인 완료'];
+  const schema = 'delivery-review-records/v1';
+  const dataset = 'delivery-operations-2026-10-945';
+  function cleanRecord(record) {
+    if (!record || typeof record !== 'object' || Array.isArray(record) || !statuses.includes(record.status)) throw new Error('점검 상태 형식이 올바르지 않습니다.');
+    if (typeof record.owner !== 'string' || record.owner.length > 80 || typeof record.memo !== 'string' || record.memo.length > 2000) throw new Error('담당자 또는 메모 형식을 확인하세요.');
+    if (typeof record.updatedAt !== 'string' || !Number.isFinite(Date.parse(record.updatedAt))) throw new Error('저장 시각 형식이 올바르지 않습니다.');
+    return {status: record.status, owner: record.owner, memo: record.memo, updatedAt: record.updatedAt};
+  }
+  function parse(text, allowedIds) {
+    const raw = JSON.parse(text);
+    if (!raw || raw.schema !== schema || raw.dataset !== dataset || !raw.records || typeof raw.records !== 'object' || Array.isArray(raw.records)) throw new Error('이 운영 데이터용 점검 기록 파일이 아닙니다.');
+    const records = Object.create(null);
+    for (const [id, record] of Object.entries(raw.records)) {
+      if (!allowedIds.has(id)) throw new Error('운영 데이터에 없는 주문ID가 있습니다: '+id);
+      records[id] = cleanRecord(record);
+    }
+    return records;
+  }
+  function pack(records) { return JSON.stringify({schema, dataset, exportedAt: new Date().toISOString(), records}, null, 2); }
+  function empty() { return {status:'미점검', owner:'', memo:'', updatedAt:''}; }
+  function csvCell(value) {
+    let text = String(value ?? '');
+    if (/^[\s]*[=+@-]/.test(text)) text = "'"+text;
+    return '"'+text.replace(/"/g,'""')+'"';
+  }
+  return {statuses, schema, dataset, parse, pack, empty, cleanRecord, csvCell};
+})();
+if (typeof module !== 'undefined' && module.exports) module.exports = DeliveryReviewState;
+
+</script>
+<script>
+/* Review records are kept separately from embedded prediction data. */
+const reviewIds = new Set(DATA.map(r=>r['주문ID']));
+const reviewOrderMap = new Map(DATA.map(r=>[r['주문ID'],r]));
+const reviewStorageKey = 'delivery-review-extra-v1-2026-10';
+let reviewRecords = Object.create(null), reviewPendingImport = null;
+let reviewOpenId = null, reviewQueue = [], reviewOriginalForm = '', reviewReturnButton = null;
+let reviewStorageMessage = '기록은 이 브라우저·주소에 저장됩니다. 다른 PC나 주소에서 이어가려면 기록 백업 파일을 사용하세요.';
+try {
+  const saved = localStorage.getItem(reviewStorageKey);
+  if (saved) reviewRecords = DeliveryReviewState.parse(saved, reviewIds);
+} catch (error) {
+  reviewStorageMessage = '브라우저 저장소의 기록을 불러오지 못했습니다. 기록 파일을 불러오거나, 작성 후 파일로 백업하세요.';
+}
+const reviewBaseList = currentListRows;
+const reviewBaseRender = render;
+function reviewRecord(id) { return Object.prototype.hasOwnProperty.call(reviewRecords,id)?reviewRecords[id]:DeliveryReviewState.empty(); }
+function reviewCandidates() {
+  if ($('review-search-scope').value !== 'all') return reviewBaseList();
+  const query=$('order-search').value.trim().toLocaleLowerCase('ko');
+  return sortedRows(DATA.filter(r=>!query||[r['주문ID'],r['배송지역']].some(v=>String(v).toLocaleLowerCase('ko').includes(query))));
+}
+currentListRows = function() {
+  const status=$('review-list-status').value;
+  return reviewCandidates().filter(r=>!status||reviewRecord(r['주문ID']).status===status);
+};
+function reviewTime(value) {
+  return value?new Intl.DateTimeFormat('ko-KR',{dateStyle:'short',timeStyle:'short',timeZone:'Asia/Seoul'}).format(new Date(value)):'아직 저장한 기록이 없습니다.';
+}
+function reviewMessage(text,error=false) { $('review-message').textContent=text;$('review-message').classList.toggle('error',error); }
+function reviewPersist() {
+  try { localStorage.setItem(reviewStorageKey,DeliveryReviewState.pack(reviewRecords)); return true; }
+  catch(error) { reviewStorageMessage='브라우저 저장이 불가능합니다. 현재 화면을 닫기 전에 반드시 기록 백업 파일을 저장하세요.';return false; }
+}
+function reviewDownload(text,name,type) {
+  const url=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');
+  a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+listCSV = function(rows) {
+  const columns=['주문ID','점검기준일시','물류센터','운송사','배송지역','배송유형','배송약속일','배송여유일수','재고확보상태','지연예측확률','위험여부','운영우선순위','확인할사항','점검상태','담당자','점검메모','기록저장시각'];
+  return '\uFEFF'+[columns,...rows.map(r=>{const rank=priority(r),record=reviewRecord(r['주문ID']);return columns.map(c=>c==='운영우선순위'?(rank?rank+'순위':'일반 점검'):c==='확인할사항'?(rank?priorityRules[rank].action:'배송 일정 확인'):c==='점검상태'?record.status:c==='담당자'?record.owner:c==='점검메모'?record.memo:c==='기록저장시각'?record.updatedAt:r[c]);})].map(row=>row.map(DeliveryReviewState.csvCell).join(',')).join('\r\n');
+};
+render = function() {
+  reviewBaseRender();
+  const candidates=reviewCandidates(),globalScope=$('review-search-scope').value==='all';
+  $('review-stats').textContent=DeliveryReviewState.statuses.map(status=>status+' '+number(candidates.filter(r=>reviewRecord(r['주문ID']).status===status).length)+'건').join(' / ');
+  $('review-storage').textContent=reviewStorageMessage;
+  $('review-scope-note').textContent=globalScope?'전체 운영 데이터 945건에서 검색합니다. 날짜·센터·운송사·우선순위 조건은 목록에 적용되지 않으며, 상단 요약 수치는 기존 조회 조건을 유지합니다.':'현재 날짜·센터·운송사·우선순위 조건 안에서 검색합니다. 점검 상태 필터는 목록과 CSV에만 적용됩니다.';
+  if(globalScope){$('list-title').textContent='전체 운영 데이터 검색 결과';$('priority-summary').hidden=true;$('selection-banner').hidden=true;}
+  const statusHeader=$('review-status-header');
+  if(!statusHeader){const th=document.createElement('th');th.id='review-status-header';th.scope='col';th.textContent='점검 기록';document.querySelector('#operations-panel thead tr').insertBefore(th,document.querySelector('#operations-panel thead tr th:last-child'));}
+  document.querySelectorAll('#orders tr').forEach(row=>{
+    const cell=row.querySelector('.order-id');
+    if(!cell){const empty=row.querySelector('td');if(empty)empty.colSpan=11;return;}
+    const id=cell.firstChild.textContent.trim(),record=reviewRecord(id),secondary=cell.querySelector('.order-secondary').outerHTML;
+    cell.innerHTML='<button type="button" class="review-open" data-review-order="'+escapeHTML(id)+'" aria-label="'+escapeHTML(id)+' 점검하기">'+escapeHTML(id)+'</button>'+secondary+'<span class="review-mobile">눌러서 점검·기록</span>';
+    const td=document.createElement('td');td.className='review-record';
+    td.innerHTML='<span class="review-chip '+(record.status==='확인 완료'?'done':record.status==='확인 중'?'working':'')+'">'+escapeHTML(record.status)+'</span>'+(record.owner?'<span class="review-owner">'+escapeHTML(record.owner)+'</span>':'');
+    row.insertBefore(td,row.lastElementChild);
+    cell.querySelector('button').addEventListener('click',event=>reviewOpen(id,event.currentTarget));
+  });
+  document.querySelectorAll('[data-priority]').forEach(button=>button.addEventListener('click',()=>{
+    if($('review-search-scope').value==='all'){$('review-search-scope').value='current';page=1;render();}
+  }));
+};
+function reviewFactsHTML(pairs) { return pairs.map(([name,value])=>'<div><dt>'+escapeHTML(name)+'</dt><dd>'+escapeHTML(value)+'</dd></div>').join(''); }
+function reviewFormValue() { return JSON.stringify({status:$('review-status-input').value,owner:$('review-owner-input').value,memo:$('review-memo-input').value}); }
+function reviewOpen(id,returnButton,preserveQueue=false) {
+  if(!currentListRows().some(r=>r['주문ID']===id)) {reviewMessage('현재 목록에 없는 주문입니다. 검색 조건을 확인하세요.',true);return;}
+  if(!preserveQueue)reviewQueue=currentListRows().map(r=>r['주문ID']);
+  reviewReturnButton=returnButton||reviewReturnButton;reviewOpenId=id;
+  const r=reviewOrderMap.get(id),record=reviewRecord(id),rank=priority(r);
+  $('review-dialog-title').textContent=id+' · 점검·대응 기록';
+  $('review-score').innerHTML='<span>'+(rank?rank+'순위':'일반 점검')+'</span><span class="'+(isRisk(r)?'risk':'')+'">'+(isRisk(r)?'위험 주문':'위험 미표시')+'</span><span>지연예측확률 '+(r['지연예측확률']*100).toFixed(2)+'%</span>';
+  $('review-facts').innerHTML=reviewFactsHTML([['점검 시점',r['점검기준일시']],['물류센터',r['물류센터']],['운송사',r['운송사']],['배송지역 / 유형',r['배송지역']+' / '+r['배송유형']],['배송약속일',r['배송약속일']],['배송여유일',r['배송여유일수']+'일'],['재고확보상태',r['재고확보상태']],['상품군',r['상품군']]]);
+  $('review-reference').innerHTML=reviewFactsHTML([['상품수량',r['상품수량']+'개'],['총중량',r['총중량_kg']+'kg'],['배송거리',r['배송거리_km']+'km'],['센터출고대기',number(r['센터출고대기건수'])+'건'],['당일처리계획',number(r['센터당일처리계획건수'])+'건'],['센터물량부하율',(r['센터물량부하율']*100).toFixed(2)+'%'],['주문 후 경과시간',r['주문후_경과시간']+'시간']]);
+  const questions=[];
+  if(r['재고확보상태']!=='확보완료')questions.push('남은 재고를 언제 확보할 수 있는지 확인했나요?');
+  if(r['배송여유일수']<=0)questions.push('오늘 출고와 배송이 가능한지, 운송사 인계가 끝났는지 확인했나요?');
+  else questions.push('약속일까지 출고·배송이 가능한지, 다시 확인할 시점을 정했나요?');
+  if(r['센터물량부하율']>1)questions.push('센터 대기 물량이 처리 계획을 넘는 상황에서 해당 주문의 출고 순서를 확인했나요?');
+  $('review-questions').innerHTML=questions.map(q=>'<li>'+escapeHTML(q)+'</li>').join('');
+  $('review-status-input').value=record.status;$('review-owner-input').value=record.owner;$('review-memo-input').value=record.memo;
+  $('review-updated').textContent=record.updatedAt?'마지막 저장: '+reviewTime(record.updatedAt):reviewTime('');
+  $('review-memo-count').textContent=number(record.memo.length)+' / 2,000자';
+  $('review-dialog-feedback').textContent='';$('review-discard').hidden=true;reviewOriginalForm=reviewFormValue();
+  const index=reviewQueue.indexOf(id);$('review-save-next').disabled=index<0||index===reviewQueue.length-1;
+  if(!$('review-dialog').open)$('review-dialog').showModal();
+  $('review-status-input').focus();
+}
+function reviewClose(force=false) {
+  if(!force&&reviewFormValue()!==reviewOriginalForm){$('review-discard').hidden=false;return;}
+  $('review-dialog').close();reviewOpenId=null;
+  if(reviewReturnButton&&reviewReturnButton.isConnected)reviewReturnButton.focus();
+}
+function reviewSave(next) {
+  if(!reviewOpenId)return;
+  const id=reviewOpenId,record={status:$('review-status-input').value,owner:$('review-owner-input').value.trim(),memo:$('review-memo-input').value,updatedAt:new Date().toISOString()};
+  try { reviewRecords[id]=DeliveryReviewState.cleanRecord(record); }
+  catch(error) {$('review-dialog-feedback').textContent=error.message;return;}
+  const persisted=reviewPersist();reviewOriginalForm=reviewFormValue();render();
+  reviewMessage(id+' 기록을 '+(persisted?'브라우저에 저장했습니다.':'현재 화면에 반영했습니다. 기록 파일 백업이 필요합니다.'),!persisted);
+  const ids=new Set(currentListRows().map(r=>r['주문ID'])),index=reviewQueue.indexOf(id),nextId=reviewQueue.slice(index+1).find(candidate=>ids.has(candidate));
+  if(next&&nextId){reviewOpen(nextId,null,true);if(!persisted)$('review-dialog-feedback').textContent=reviewStorageMessage;}
+  else {reviewClose(true);if(next&&!nextId)reviewMessage('저장했습니다. 현재 조건에서 다음 점검 주문이 없습니다.');}
+}
+$('review-close').addEventListener('click',()=>reviewClose());
+$('review-dialog').addEventListener('cancel',event=>{event.preventDefault();reviewClose();});
+$('review-discard-confirm').addEventListener('click',()=>reviewClose(true));
+$('review-continue').addEventListener('click',()=>{$('review-discard').hidden=true;$('review-memo-input').focus();});
+$('review-memo-input').addEventListener('input',()=>{$('review-memo-count').textContent=number($('review-memo-input').value.length)+' / 2,000자';});
+$('review-save-close').addEventListener('click',()=>reviewSave(false));
+$('review-save-next').addEventListener('click',()=>reviewSave(true));
+$('review-list-status').addEventListener('change',()=>{page=1;render();});
+$('review-search-scope').addEventListener('change',()=>{if($('review-search-scope').value==='all')view='all';page=1;render();});
+$('reset').addEventListener('click',()=>{$('review-search-scope').value='current';$('review-list-status').value='';page=1;render();});
+$('review-backup').addEventListener('click',()=>{reviewDownload(DeliveryReviewState.pack(reviewRecords),'배송점검기록_'+new Date().toISOString().slice(0,10)+'.json','application/json;charset=utf-8');reviewMessage(number(Object.keys(reviewRecords).length)+'건의 작성 기록 백업을 요청했습니다.');});
+$('review-import-open').addEventListener('click',()=>$('review-import-file').click());
+$('review-import-file').addEventListener('change',async event=>{
+  const file=event.target.files[0];if(!file)return;
+  try {
+    if(file.size>2000000)throw new Error('기록 파일은 2MB 이하만 불러올 수 있습니다.');
+    reviewPendingImport=DeliveryReviewState.parse(await file.text(),reviewIds);
+    const ids=Object.keys(reviewPendingImport),conflicts=ids.filter(id=>Object.prototype.hasOwnProperty.call(reviewRecords,id)).length;
+    $('review-import-preview-text').textContent=ids.length+'건을 불러옵니다. 기존 기록 '+conflicts+'건은 파일 내용으로 덮어씁니다. 적용 전 기록 백업을 권장합니다.';
+    $('review-import-preview').hidden=false;reviewMessage('파일을 확인했습니다. 아래 적용 버튼을 눌러야 기록이 변경됩니다.');
+  } catch(error) {reviewPendingImport=null;$('review-import-preview').hidden=true;reviewMessage('불러오기 실패: '+error.message,true);}
+  event.target.value='';
+});
+$('review-import-apply').addEventListener('click',()=>{
+  if(!reviewPendingImport)return;
+  for(const [id,record] of Object.entries(reviewPendingImport))reviewRecords[id]=record;
+  const count=Object.keys(reviewPendingImport).length,persisted=reviewPersist();reviewPendingImport=null;$('review-import-preview').hidden=true;render();
+  reviewMessage(count+'건의 기록을 불러왔습니다.'+(persisted?'':' 브라우저 저장이 불가능하므로 파일로 백업하세요.'),!persisted);
+});
+$('review-import-cancel').addEventListener('click',()=>{reviewPendingImport=null;$('review-import-preview').hidden=true;reviewMessage('기록 불러오기를 취소했습니다.');});
+render();
+
+</script>
+<!-- operations-review-extra-v1 -->
 </body>
 </html>
